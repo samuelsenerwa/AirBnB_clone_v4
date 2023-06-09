@@ -8,8 +8,8 @@ $(document).ready(function () {
       amenityIds.push(amenityId);
       amenityNames.push(name);
     } else {
-      amenityIds = amenityIds.filter(amenityId);
-      amenityNames = amenityNames.filter(name);
+      amenityIds = amenityIds.filter((id) => id !== amenityId);
+      amenityNames = amenityNames.filter((amenityName) => amenityName !== name);
     }
     $('DIV.amenities h4').text(amenityNames.join(', '));
   });
